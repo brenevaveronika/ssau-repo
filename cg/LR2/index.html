@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фрактал</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Добро пожаловать!</h1>
+<p>Здесь вы можете нарисовать любую (ну почти) L-систему, для этого заполните нужные данные ниже:</p>
+<form id="l-system-form">
+  <input type="text" id="axiom" placeholder="Аксиома" required>
+  <input type="text" id="rules" placeholder="Правило" required>
+  <input type="number" id="angle" placeholder="Угол (PI / ?)" required>
+  <button type="submit">Нарисовать</button>
+</form>
+<div id="canvas-container">
+  <canvas id="canvas"></canvas>
+</div>
+
+<p> Нажмите "+" для увеличения итераций, "-" для уменьшения. Исходное количество итераций = 0.</p>
+<script src="script.js"></script>
+</body>
+</html>

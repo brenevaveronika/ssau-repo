@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 20px;
+  gap: 10px;
+  height: 100vh;
+  overflow: hidden; /* Убираем прокрутку на уровне body */
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#l-system-form {
+  display: flex;
+  gap: 10px;
+}
+
+#canvas-container {
+  width: 100vw; /* Ширина контейнера */
+  height: 100vh; /* Высота контейнера */
+  position: relative; /* Для позиционирования */
+  overflow: hidden; /* Убираем прокрутку */
+  background-color: lightgray; /* Фон контейнера */
+}
+#canvas {
+  display: block; /* Убираем пробелы вокруг канваса */
+  position: absolute; /* Позволяет канвасу занимать весь контейнер */
+  top: 0;
+  left: 0;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рисование фигур</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        .controls label {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <strong>Выберите фигуру:</strong>
+        <label>
+            <input type="radio" name="shape" value="line" checked> Линия
+        </label>
+        <label>
+            <input type="radio" name="shape" value="circle"> Круг
+        </label>
+        <label>
+            <input type="radio" name="shape" value="bezier"> Кривая Безье
+        </label>
+        <label>
+            <input type="radio" name="shape" value="color"> Однотонный цвет
+        </label>
+        <label>
+            <input type="radio" name="shape" value="pattern"> Узор (вертикальные полосы)
+        </label>
+    </div>
+    <div class="colorPicker">
+        <label for="colorPicker">Выбрите цвет:</label>
+        <input type="color" name="color" id="colorPicker">
+    </div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script src="index.js"></script>
+</body>
+</html>

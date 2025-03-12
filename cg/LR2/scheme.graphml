@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.25-->
+  <key for="port" id="d0" yfiles.type="portgraphics"/>
+  <key for="port" id="d1" yfiles.type="portgeometry"/>
+  <key for="port" id="d2" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d3"/>
+  <key attr.name="description" attr.type="string" for="node" id="d4"/>
+  <key for="node" id="d5" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d6" yfiles.type="resources"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d7"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d8"/>
+  <key for="edge" id="d9" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <node id="n0">
+      <data key="d5">
+        <y:GenericNode configuration="RectangleNodeStyle">
+          <y:Geometry height="60.0" width="177.0" x="-89.25" y="43.25"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Roboto" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.701171875" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="39.90234375" x="68.548828125" xml:space="preserve" y="22.6494140625">начало<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UserData>
+            <yed:NodeStyleUserData>
+              <RectangleNodeStyle xmlns="http://www.yworks.com/xml/yfiles-for-java/3.1" CornerSize="1.0" CornerSizeScalingEnabled="True" Pen="#FF663800"/>
+            </yed:NodeStyleUserData>
+          </y:UserData>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="ArrowNodeStyle">
+          <y:Geometry height="60.0" width="177.0" x="-89.25" y="118.25"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.701171875" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="67.376953125" x="54.8115234375" xml:space="preserve" y="22.6494140625">width, height<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UserData>
+            <yed:NodeStyleUserData>
+              <ArrowNodeStyle xmlns="http://www.yworks.com/xml/yfiles-for-java/3.1" Angle="0.20943951023931953" Pen="#FF663800" Shape="PARALLELOGRAM"/>
+            </yed:NodeStyleUserData>
+          </y:UserData>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d4"/>
+      <data key="d5">
+        <y:ShapeNode>
+          <y:Geometry height="60.0" width="177.0" x="-88.5" y="193.24624990624534"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" raised="false" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.40234375" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="169.400390625" x="3.7998046875" xml:space="preserve" y="15.298828125">x_max = 1      y_max = 1,2
+x_min = -2,2           y_min = -1,2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d4"/>
+      <data key="d5">
+        <y:ShapeNode>
+          <y:Geometry height="60.0" width="180.0" x="-89.23986538542272" y="268.24239777643743"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" raised="false" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="44.103515625" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="155.056640625" x="12.4716796875" xml:space="preserve" y="7.9482421875">max_color = 255
+dx = (x_max - x_min) / width
+dy = (y_max - y_min) / height<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="RectangleNodeStyle">
+          <y:Geometry height="60.0" width="180.0" x="-88.47973077084544" y="343.2385456466295"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.701171875" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="116.05078125" x="31.974609375" xml:space="preserve" y="22.6494140625">for (i=0; i &lt; width; i++)<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UserData>
+            <yed:NodeStyleUserData>
+              <RectangleNodeStyle xmlns="http://www.yworks.com/xml/yfiles-for-java/3.1" CornerStyle="CUT" Corners="TOP" Pen="#FF663800"/>
+            </yed:NodeStyleUserData>
+          </y:UserData>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n5">
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="RectangleNodeStyle">
+          <y:Geometry height="60.0" width="180.0" x="-88.92379350562368" y="418.23723102369195"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.701171875" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="120.732421875" x="29.6337890625" xml:space="preserve" y="22.6494140625">for (j=0; j &lt; height; j++)<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UserData>
+            <yed:NodeStyleUserData>
+              <RectangleNodeStyle xmlns="http://www.yworks.com/xml/yfiles-for-java/3.1" CornerStyle="CUT" Corners="TOP" Pen="#FF663800"/>
+            </yed:NodeStyleUserData>
+          </y:UserData>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n6">
+      <data key="d4"/>
+      <data key="d5">
+        <y:ShapeNode>
+          <y:Geometry height="60.0" width="180.0" x="-89.1978537918855" y="493.2367302950838"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" raised="false" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="44.103515625" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="119.033203125" x="30.4833984375" xml:space="preserve" y="7.9482421875">x = x_min + i * dx
+y = y_min + j * dy
+z = new Complex(x, y)<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n7">
+      <data key="d4"/>
+      <data key="d5">
+        <y:ShapeNode>
+          <y:Geometry height="60.0" width="180.0" x="-89.38688349638466" y="568.2364920798443"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" raised="false" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.701171875" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="27.0234375" x="76.48828125" xml:space="preserve" y="22.6494140625">n = 0<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n8">
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="RectangleNodeStyle">
+          <y:Geometry height="60.0" width="180.0" x="-90.00000000000006" y="643.2339859589933"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.40234375" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="111.05859375" x="34.470703125" xml:space="preserve" y="15.298828125">while abs(z) &lt; 2 and 
+n &lt; max_color<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UserData>
+            <yed:NodeStyleUserData>
+              <RectangleNodeStyle xmlns="http://www.yworks.com/xml/yfiles-for-java/3.1" CornerStyle="CUT" Corners="TOP" Pen="#FF663800"/>
+            </yed:NodeStyleUserData>
+          </y:UserData>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n9">
+      <data key="d4"/>
+      <data key="d5">
+        <y:ShapeNode>
+          <y:Geometry height="60.0" width="180.0" x="-90.0" y="718.2339859589933"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" raised="false" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.40234375" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="57.65625" x="61.171875" xml:space="preserve" y="15.298828125">z = z^3 + z
+n += 1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n10">
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="RectangleNodeStyle">
+          <y:Geometry height="60.0" width="180.0" x="-90.0" y="793.2339859589933"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Roboto" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.701171875" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="62.77734375" x="58.611328125" xml:space="preserve" y="22.6494140625">конец while<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UserData>
+            <yed:NodeStyleUserData>
+              <RectangleNodeStyle xmlns="http://www.yworks.com/xml/yfiles-for-java/3.1" CornerStyle="CUT" Corners="BOTTOM" Pen="#FF663800"/>
+            </yed:NodeStyleUserData>
+          </y:UserData>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n11">
+      <data key="d4"/>
+      <data key="d5">
+        <y:ShapeNode>
+          <y:Geometry height="60.0" width="180.0" x="-90.0" y="868.2339859589933"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" raised="false" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.40234375" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="123.36328125" x="28.318359375" xml:space="preserve" y="15.298828125">color = getColor(n)
+setPixelColor(i, j, color)<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n12">
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="RectangleNodeStyle">
+          <y:Geometry height="60.0" width="180.0" x="-90.00000000000011" y="943.2339859589933"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.701171875" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="2.666015625" x="88.6669921875" xml:space="preserve" y="22.6494140625">j<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UserData>
+            <yed:NodeStyleUserData>
+              <RectangleNodeStyle xmlns="http://www.yworks.com/xml/yfiles-for-java/3.1" CornerStyle="CUT" Corners="BOTTOM" Pen="#FF663800"/>
+            </yed:NodeStyleUserData>
+          </y:UserData>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n13">
+      <data key="d4"/>
+      <data key="d5">
+        <y:GenericNode configuration="RectangleNodeStyle">
+          <y:Geometry height="60.0" width="180.0" x="-90.00000000000011" y="1018.2339859589933"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.701171875" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="2.666015625" x="88.6669921875" xml:space="preserve" y="22.6494140625">i<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UserData>
+            <yed:NodeStyleUserData>
+              <RectangleNodeStyle xmlns="http://www.yworks.com/xml/yfiles-for-java/3.1" CornerStyle="CUT" Corners="BOTTOM" Pen="#FF663800"/>
+            </yed:NodeStyleUserData>
+          </y:UserData>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n14">
+      <data key="d5">
+        <y:GenericNode configuration="RectangleNodeStyle">
+          <y:Geometry height="60.0" width="177.0" x="-88.50000000000011" y="1093.2339859589933"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="0" fontFamily="Roboto" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="14.701171875" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="custom" rightInset="0" textColor="#000000" topInset="0" verticalTextPosition="bottom" visible="true" width="32.09765625" x="72.451171875" xml:space="preserve" y="22.6494140625">конец<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UserData>
+            <yed:NodeStyleUserData>
+              <RectangleNodeStyle xmlns="http://www.yworks.com/xml/yfiles-for-java/3.1" CornerSize="1.0" CornerSizeScalingEnabled="True" Pen="#FF663800"/>
+            </yed:NodeStyleUserData>
+          </y:UserData>
+        </y:GenericNode>
+      </data>
+    </node>
+    <edge id="e0" source="n0" target="n1">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.032258064516128" tx="0.0" ty="-29.032258064516128"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n1" target="n2">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.032258064516128" tx="0.0" ty="-29.032258064516128"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n2" target="n3">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.032258064516128" tx="0.0" ty="-29.032258064516157"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n3" target="n4">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.0322580645161" tx="0.0" ty="-29.032258064516157"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="n4" target="n5">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.0322580645161" tx="0.0" ty="-29.032258064516157"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e5" source="n5" target="n6">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.0322580645161" tx="0.0" ty="-29.032258064516157"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e6" source="n6" target="n7">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.0322580645161" tx="0.0" ty="-29.0322580645161"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e7" source="n7" target="n8">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.0322580645161" tx="0.0" ty="-29.0322580645161"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e8" source="n8" target="n9">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.0322580645161" tx="0.0" ty="-29.0322580645161"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e9" source="n9" target="n10">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.0322580645161" tx="0.0" ty="-29.0322580645161"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e10" source="n10" target="n11">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.0322580645161" tx="0.0" ty="-29.0322580645161"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e11" source="n11" target="n12">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.0322580645161" tx="0.0" ty="-29.0322580645161"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e12" source="n12" target="n13">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.0322580645161" tx="0.0" ty="-29.0322580645161"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e13" source="n13" target="n14">
+      <data key="d8"/>
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="29.0322580645161" tx="0.0" ty="-29.0322580645161"/>
+          <y:LineStyle cap="0" color="#663800" dashPhase="0.0" join="0" miterLimit="10.0" type="custom" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+  </graph>
+  <data key="d6">
+    <y:Resources/>
+  </data>
+</graphml>
