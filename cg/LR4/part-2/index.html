@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Волновой алгоритм скелетизации</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .image-container {
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Волновой алгоритм скелетизации</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <br><br>
+
+    <div class="container">
+        <div class="image-container">
+            <p>Исходное изображение</p>
+            <canvas id="originalCanvas"></canvas>
+        </div>
+        <div class="image-container">
+            <p>Скелетизация</p>
+            <canvas id="skeletonCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
