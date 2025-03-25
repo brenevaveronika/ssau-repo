@@ -9,7 +9,7 @@ class Node {
 function copyRandomList(head) {
     if (!head) return null;
 
-    // 1. Создаём копии узлов и вставляем их после оригинальных узлов
+    // создаём копии узлов и вставляем их после оригинальных узлов
     let current = head;
     while (current) {
         let copy = new Node(current.val);
@@ -18,7 +18,7 @@ function copyRandomList(head) {
         current = copy.next;
     }
 
-    // 2. Корректируем указатели random у копий
+    // корректируем указатели random у копий
     current = head;
     while (current) {
         if (current.random) {
@@ -27,7 +27,7 @@ function copyRandomList(head) {
         current = current.next.next;
     }
 
-    // 3. Разделяем исходный и скопированный список
+    // разделяем исходный и скопированный список
     let original = head;
     let copied = head.next;
     let result = copied;
@@ -39,11 +39,11 @@ function copyRandomList(head) {
         copied = copied.next;
     }
 
-    // 4. Возвращаем скопированный список
+    // возвращаем скопированный список
     return result;
 }
 
-// Вспомогательная функция для создания списка с random указателями
+
 function createRandomList(arr) {
     if (arr.length === 0) return null;
     let nodes = arr.map((val) => new Node(val));
@@ -58,7 +58,6 @@ function createRandomList(arr) {
     return nodes[0];
 }
 
-// Вспомогательная функция для печати списка с random указателями
 function printRandomList(head) {
     let current = head;
     let result = [];
@@ -70,7 +69,6 @@ function printRandomList(head) {
     console.log(result.join(" -> "));
 }
 
-// Пример использования
 let list = createRandomList([1, 2, 3, 4]);
 console.log("Исходный список:");
 printRandomList(list);

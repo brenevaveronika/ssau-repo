@@ -9,25 +9,24 @@ function findKthFromEnd(head, k) {
     let fast = head;
     let slow = head;
 
-    // Перемещаем fast на k шагов вперёд
+    // перемещаем fast на k шагов вперёд
     for (let i = 0; i < k; i++) {
         if (fast === null) {
-            return null; // Если k больше длины списка, возвращаем null
+            return null;
         }
         fast = fast.next;
     }
 
-    // Перемещаем fast и slow одновременно
+    // перемещаем fast и slow одновременно
     while (fast !== null) {
         fast = fast.next;
         slow = slow.next;
     }
 
-    // slow теперь указывает на k-й элемент с конца
     return slow;
 }
 
-// Вспомогательная функция для создания связного списка из массива
+
 function createLinkedList(arr) {
     let head = new ListNode(arr[0]);
     let current = head;
@@ -38,7 +37,7 @@ function createLinkedList(arr) {
     return head;
 }
 
-// Вспомогательная функция для печати связного списка
+
 function printLinkedList(head) {
     let result = [];
     while (head !== null) {
@@ -48,7 +47,7 @@ function printLinkedList(head) {
     console.log(result.join(" -> "));
 }
 
-// Пример использования
+
 let list = createLinkedList([1, 2, 3, 4, 5, 6, 7]);
 let k = 3;
 console.log("Исходный список:");
