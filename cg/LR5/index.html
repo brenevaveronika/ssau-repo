@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6201 Бренева - Суперэллипсоид</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>6201 Бренева - Суперэллипсоид</h1>
+        
+        <div class="content-wrapper">
+            <canvas id="canvas" width="700" height="700"></canvas>
+            
+            <div class="controls-container">
+                <div class="control-group">
+                    <h3>Параметры формы</h3>
+                    <div class="control">
+                        <label for="A">A: <span id="A-value">3</span></label>
+                        <input type="range" id="A" min="1" max="10" step="0.1" value="3">
+                    </div>
+                    
+                    <div class="control">
+                        <label for="B">B: <span id="B-value">3</span></label>
+                        <input type="range" id="B" min="1" max="10" step="0.1" value="3">
+                    </div>
+                    
+                    <div class="control">
+                        <label for="C">C: <span id="C-value">3</span></label>
+                        <input type="range" id="C" min="1" max="10" step="0.1" value="3">
+                    </div>
+                    
+                    <div class="control">
+                        <label for="r">r: <span id="r-value">1</span></label>
+                        <input type="range" id="r" min="0.1" max="5" step="0.1" value="1">
+                    </div>
+                    
+                    <div class="control">
+                        <label for="t">t: <span id="t-value">1</span></label>
+                        <input type="range" id="t" min="0.1" max="5" step="0.1" value="1">
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Преобразования</h3>
+                    <div class="control">
+                        <label for="translateX">Перемещение X: <span id="translateX-value">0</span></label>
+                        <input type="range" id="translateX" min="-500" max="500" value="0">
+                    </div>
+                    
+                    <div class="control">
+                        <label for="translateY">Перемещение Y: <span id="translateY-value">0</span></label>
+                        <input type="range" id="translateY" min="-500" max="500" value="0">
+                    </div>
+                    
+                    <div class="control">
+                        <label for="translateZ">Перемещение Z: <span id="translateZ-value">0</span></label>
+                        <input type="range" id="translateZ" min="-500" max="500" value="0">
+                    </div>
+                    
+                    <div class="control">
+                        <label for="scale">Масштаб: <span id="scale-value">1</span></label>
+                        <input type="range" id="scale" min="0.1" max="3" step="0.1" value="1">
+                    </div>
+                    
+                    <div class="control">
+                        <label for="rotateX">Вращение X: <span id="rotateX-value">0</span>°</label>
+                        <input type="range" id="rotateX" min="0" max="360" value="0">
+                    </div>
+                    
+                    <div class="control">
+                        <label for="rotateY">Вращение Y: <span id="rotateY-value">0</span>°</label>
+                        <input type="range" id="rotateY" min="0" max="360" value="0">
+                    </div>
+                    
+                    <div class="control">
+                        <label for="rotateZ">Вращение Z: <span id="rotateZ-value">0</span>°</label>
+                        <input type="range" id="rotateZ" min="0" max="360" value="0">
+                    </div>
+                </div>
+                
+                <div class="buttons">
+                    <button id="reset">Сбросить</button>
+                    <button id="wireframe">Каркас/Поверхность</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
