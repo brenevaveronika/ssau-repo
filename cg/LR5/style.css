@@ -56,10 +56,6 @@ canvas {
     margin-bottom: 15px;
 }
 
-.control:last-child {
-    margin-bottom: 0;
-}
-
 label {
     display: flex;
     justify-content: space-between;

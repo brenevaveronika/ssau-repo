@@ -1,23 +1,112 @@
+
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+
 
 let A = 3, B = 3, C = 3, r = 1, t = 1;
 let wireframeMode = false;
 
-let translateX = 0, translateY = 0, translateZ = 0;
-let scale = 1;
-let rotateX = 0, rotateY = 0, rotateZ = 0;
 
-const segments = 30;
+const segments = 40;
 
-const sizeMultiplier = 50;
+const sizeMultiplier = 150;
+
+
+let transformMatrix = createIdentityMatrix();
+
+
+function createIdentityMatrix() {
+    return [
+        [1, 0, 0, 0],
+        [0, 1, 0, 0],
+        [0, 0, 1, 0],
+        [0, 0, 0, 1]
+    ];
+}
+
+function multiplyMatrices(a, b) {
+    const result = createIdentityMatrix();
+    for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 4; j++) {
+            result[i][j] = 0;
+            for (let k = 0; k < 4; k++) {
+                result[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+    return result;
+}
+
+
+function createTranslationMatrix(tx, ty, tz) {
+    return [
+        [1, 0, 0, tx],
+        [0, 1, 0, ty],
+        [0, 0, 1, tz],
+        [0, 0, 0, 1]
+    ];
+}
+
+
+function createScaleMatrix(sx, sy, sz) {
+    return [
+        [sx, 0, 0, 0],
+        [0, sy, 0, 0],
+        [0, 0, sz, 0],
+        [0, 0, 0, 1]
+    ];
+}
+
+
+function createRotationXMatrix(angle) {
+    const rad = angle * Math.PI / 180;
+    const cos = Math.cos(rad);
+    const sin = Math.sin(rad);
+    return [
+        [1, 0, 0, 0],
+        [0, cos, -sin, 0],
+        [0, sin, cos, 0],
+        [0, 0, 0, 1]
+    ];
+}
+
+function createRotationYMatrix(angle) {
+    const rad = angle * Math.PI / 180;
+    const cos = Math.cos(rad);
+    const sin = Math.sin(rad);
+    return [
+        [cos, 0, sin, 0],
+        [0, 1, 0, 0],
+        [-sin, 0, cos, 0],
+        [0, 0, 0, 1]
+    ];
+}
+
+function createRotationZMatrix(angle) {
+    const rad = angle * Math.PI / 180;
+    const cos = Math.cos(rad);
+    const sin = Math.sin(rad);
+    return [
+        [cos, -sin, 0, 0],
+        [sin, cos, 0, 0],
+        [0, 0, 1, 0],
+        [0, 0, 0, 1]
+    ];
+}
+
+function applyTransform(point, matrix) {
+    const x = point.x * matrix[0][0] + point.y * matrix[0][1] + point.z * matrix[0][2] + matrix[0][3];
+    const y = point.x * matrix[1][0] + point.y * matrix[1][1] + point.z * matrix[1][2] + matrix[1][3];
+    const z = point.x * matrix[2][0] + point.y * matrix[2][1] + point.z * matrix[2][2] + matrix[2][3];
+    return { x, y, z };
+}
+
 
 function sgn(x) {
     return Math.sign(x);
 }
 
 
-// вспомогательные функции
 function c(w, m) {
     return sgn(Math.cos(w)) * Math.pow(Math.abs(Math.cos(w)), m);
 }
@@ -26,7 +115,7 @@ function s(w, m) {
     return sgn(Math.sin(w)) * Math.pow(Math.abs(Math.sin(w)), m);
 }
 
-// функция для вычисления точки на суперэллипсоиде
+
 function getSuperellipsoidPoint(u, v) {
     const x = A * c(v, 2/t) * c(u, 2/r) * sizeMultiplier;
     const y = B * c(v, 2/t) * s(u, 2/r) * sizeMultiplier;
@@ -34,49 +123,51 @@ function getSuperellipsoidPoint(u, v) {
     return { x, y, z };
 }
 
-// функция для вращения точки вокруг осей
-function rotatePoint(point, rx, ry, rz) {
 
-    rx = rx * Math.PI / 180;
-    ry = ry * Math.PI / 180;
-    rz = rz * Math.PI / 180;
-    
-    const y1 = point.y * Math.cos(rx) - point.z * Math.sin(rx);
-    const z1 = point.y * Math.sin(rx) + point.z * Math.cos(rx);
-    
-    const x2 = point.x * Math.cos(ry) + z1 * Math.sin(ry);
-    const z2 = -point.x * Math.sin(ry) + z1 * Math.cos(ry);
-    
-    const x3 = x2 * Math.cos(rz) - y1 * Math.sin(rz);
-    const y3 = x2 * Math.sin(rz) + y1 * Math.cos(rz);
-    
-    return { x: x3, y: y3, z: z2 };
-}
-
-// функция проекции 3D точки на 2D плоскость
 function project(point) {
+    const transformed = applyTransform(point, modelViewMatrix);
 
-    let transformed = {
-        x: point.x * scale,
-        y: point.y * scale,
-        z: point.z * scale
+    // перспективная проекция
+    const zk = 500; // координата z камеры
+    const Zna = 0; // координата z плоскости проецирования
+    const X = transformed.x * (zk - Zna) / (zk - transformed.z);
+    const Y = transformed.y * (zk - Zna) / (zk - transformed.z);
+    const Z = transformed.z;
+
+    return {
+        x: X + canvas.width / 2,
+        y: -Y + canvas.height / 2,
+        z: Z
     };
-    
-    transformed = rotatePoint(transformed, rotateX, rotateY, rotateZ);
-    
-    transformed.x += translateX;
-    transformed.y += translateY;
-    transformed.z += translateZ;
-    
-    const distance = 2500;
-    const factor = distance / (distance + transformed.z);
-    const x2d = transformed.x * factor + canvas.width / 2;
-    const y2d = -transformed.y * factor + canvas.height / 2;
-    
-    return { x: x2d, y: y2d, z: transformed.z };
 }
 
-// функция отрисовки суперэллипсоида
+
+function updateTransformMatrix() {
+    let matrix = createIdentityMatrix();
+    
+
+    const scale = parseFloat(document.getElementById('scale').value);
+    matrix = multiplyMatrices(matrix, createScaleMatrix(scale, scale, scale));
+    
+
+    const rotateX = parseFloat(document.getElementById('rotateX').value);
+    const rotateY = parseFloat(document.getElementById('rotateY').value);
+    const rotateZ = parseFloat(document.getElementById('rotateZ').value);
+    
+    matrix = multiplyMatrices(matrix, createRotationXMatrix(rotateX));
+    matrix = multiplyMatrices(matrix, createRotationYMatrix(rotateY));
+    matrix = multiplyMatrices(matrix, createRotationZMatrix(rotateZ));
+    
+
+    const translateX = parseFloat(document.getElementById('translateX').value);
+    const translateY = parseFloat(document.getElementById('translateY').value);
+    const translateZ = parseFloat(document.getElementById('translateZ').value);
+    
+    matrix = multiplyMatrices(matrix, createTranslationMatrix(translateX, translateY, translateZ));
+    
+    transformMatrix = matrix;
+}
+
 function drawSuperellipsoid() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
@@ -175,7 +266,7 @@ function updateValue(elementId, value) {
     }
 }
 
-// обработчики событий
+
 function initEventListeners() {
 
     document.getElementById('A').addEventListener('input', function() {
@@ -208,51 +299,45 @@ function initEventListeners() {
         drawSuperellipsoid();
     });
     
+    // Преобразования
     document.getElementById('translateX').addEventListener('input', function() {
-        translateX = parseFloat(this.value);
-        updateValue('translateX-value', translateX);
+        updateValue('translateX-value', this.value);
         drawSuperellipsoid();
     });
     
     document.getElementById('translateY').addEventListener('input', function() {
-        translateY = parseFloat(this.value);
-        updateValue('translateY-value', translateY);
+        updateValue('translateY-value', this.value);
         drawSuperellipsoid();
     });
     
     document.getElementById('translateZ').addEventListener('input', function() {
-        translateZ = parseFloat(this.value);
-        updateValue('translateZ-value', translateZ);
+        updateValue('translateZ-value', this.value);
         drawSuperellipsoid();
     });
     
     document.getElementById('scale').addEventListener('input', function() {
-        scale = parseFloat(this.value);
-        updateValue('scale-value', scale);
+        updateValue('scale-value', this.value);
         drawSuperellipsoid();
     });
     
     document.getElementById('rotateX').addEventListener('input', function() {
-        rotateX = parseFloat(this.value);
-        updateValue('rotateX-value', rotateX);
+        updateValue('rotateX-value', this.value);
         drawSuperellipsoid();
     });
     
     document.getElementById('rotateY').addEventListener('input', function() {
-        rotateY = parseFloat(this.value);
-        updateValue('rotateY-value', rotateY);
+        updateValue('rotateY-value', this.value);
         drawSuperellipsoid();
     });
     
     document.getElementById('rotateZ').addEventListener('input', function() {
-        rotateZ = parseFloat(this.value);
-        updateValue('rotateZ-value', rotateZ);
+        updateValue('rotateZ-value', this.value);
         drawSuperellipsoid();
     });
     
-    // кнопки
+    // Кнопки
     document.getElementById('reset').addEventListener('click', function() {
-
+        // Сброс параметров формы
         A = B = C = 3;
         r = t = 1;
         document.getElementById('A').value = A;
@@ -266,23 +351,21 @@ function initEventListeners() {
         document.getElementById('t').value = t;
         updateValue('t-value', t);
         
-        translateX = translateY = translateZ = 0;
-        scale = 1;
-        rotateX = rotateY = rotateZ = 0;
-        document.getElementById('translateX').value = translateX;
-        updateValue('translateX-value', translateX);
-        document.getElementById('translateY').value = translateY;
-        updateValue('translateY-value', translateY);
-        document.getElementById('translateZ').value = translateZ;
-        updateValue('translateZ-value', translateZ);
-        document.getElementById('scale').value = scale;
-        updateValue('scale-value', scale);
-        document.getElementById('rotateX').value = rotateX;
-        updateValue('rotateX-value', rotateX);
-        document.getElementById('rotateY').value = rotateY;
-        updateValue('rotateY-value', rotateY);
-        document.getElementById('rotateZ').value = rotateZ;
-        updateValue('rotateZ-value', rotateZ);
+        // Сброс преобразований
+        document.getElementById('translateX').value = 0;
+        updateValue('translateX-value', 0);
+        document.getElementById('translateY').value = 0;
+        updateValue('translateY-value', 0);
+        document.getElementById('translateZ').value = 0;
+        updateValue('translateZ-value', 0);
+        document.getElementById('scale').value = 1;
+        updateValue('scale-value', 1);
+        document.getElementById('rotateX').value = 0;
+        updateValue('rotateX-value', 0);
+        document.getElementById('rotateY').value = 0;
+        updateValue('rotateY-value', 0);
+        document.getElementById('rotateZ').value = 0;
+        updateValue('rotateZ-value', 0);
         
         drawSuperellipsoid();
     });
@@ -294,7 +377,7 @@ function initEventListeners() {
     });
 }
 
-// инициализация при загрузке страницы
+
 window.onload = function() {
     initEventListeners();
     drawSuperellipsoid();
