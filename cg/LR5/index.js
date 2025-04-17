@@ -167,7 +167,6 @@ function drawSuperellipsoid() {
     }
 }
 
-
 function updateValue(elementId, value) {
     const element = document.getElementById(elementId);
     if (element) {
