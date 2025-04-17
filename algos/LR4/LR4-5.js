@@ -62,6 +62,3 @@ const matrix = [
 ];
 setZeroes(matrix);
 console.log(matrix);
-
-// Время: O(m * n) — три прохода по матрице.
-// Память: O(1) — используем только две переменные (row0HasZero, col0HasZero).

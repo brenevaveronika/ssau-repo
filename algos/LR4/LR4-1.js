@@ -13,9 +13,9 @@ function isValidParentheses(s) {
     return balance === 0;
 }
 
-console.log(isValidParentheses("()"));
-console.log(isValidParentheses("(()())"));
-console.log(isValidParentheses("())"));
+console.log("()", isValidParentheses("()"));
+console.log("(()())", isValidParentheses("(()())"));
+console.log("())", isValidParentheses("())"));
 
 function isValidAllParentheses(s) {
     const stack = [];
@@ -34,11 +34,6 @@ function isValidAllParentheses(s) {
     return stack.length === 0;
 }
 
-console.log(isValidAllParentheses("()[]{}"));
-console.log(isValidAllParentheses("([{}])"));
-console.log(isValidAllParentheses("({[}]"));
-
-
-// Часть	Алгоритм	Время	Память	Ключевая идея
-// (a)	Счётчик	O(n)	O(1)	Баланс открывающих/закрывающих.
-// (b)	Стек	O(n)	O(n)	Соответствие последней открывающей скобке.
+console.log("()[]{}", isValidAllParentheses("()[]{}"));
+console.log("([{}])", isValidAllParentheses("([{}])"));
+console.log("({[}]", isValidAllParentheses("({[}]"));

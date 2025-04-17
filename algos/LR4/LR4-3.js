@@ -31,5 +31,3 @@ function maxSlidingWindow(nums, k) {
 
 console.log(maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3)); 
 
-// Время: O(n) — каждый элемент добавляется и удаляется из deque не более одного раза.
-// Память: O(k) (размер deque в худшем случае).
